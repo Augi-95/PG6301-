@@ -17,6 +17,8 @@ R1+R2
 and T1+T2
 R1: Employee can see which activity assign to it>
 R2: manager can add task in app
-
 Routing is availabe in this app
 API also implement
+
+Did not have time to finish delete API
+also not to integrate Edit API
