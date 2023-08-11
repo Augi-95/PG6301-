@@ -1,0 +1,103 @@
+
+.wrapper{
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, 265px);
+}
+.wrapper li{
+  height: 250px;
+  list-style: none;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+@media (max-width: 660px){
+  .wrapper{
+    margin: 15px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+}
+.add-box, .icon, .bottom-content, 
+.popup, header, .settings .menu li{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.add-box{
+cursor: pointer;
+flex-direction: column;
+justify-content: center;
+}
+.add-box .icon{
+height: 78px;
+width: 78px;
+color: #88ABFF;
+font-size: 40px;
+border-radius: 50%;
+justify-content: center;
+border: 2px dashed #88ABFF;
+}
+.add-box p{
+color: #ffffff;
+font-weight: 500;
+margin-top: 20px;
+}
+.salary-card {
+background-color:#697ab6;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: left;
+
+}
+p {
+margin: 0;
+line-height: 1.5;
+}
+
+
+.task-form {
+background-color: #ffffff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: left;
+width: 300px;
+margin: 0 auto;
+}
+
+h1 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+}
+
+label {
+margin-bottom: 5px;
+}
+
+input,
+select,
+textarea  {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+button {
+background-color: #697ab6;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+}
