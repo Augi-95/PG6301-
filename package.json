@@ -1,39 +1,36 @@
 {
-  "name": "task_management_system",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-
+  "name": "l2_heroku",
+  "version": "1.0.0",
+  "description": "# Tour of the course",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "cd server && npm start",
+    "dev": "concurrently npm:dev:server npm:dev:client",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm install --include=dev && npm run build",
+    "build:server": "cd server && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pg6301-fall2022/livecode_l1.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pg6301-fall2022/livecode_l1/issues"
+  },
+  "homepage": "https://github.com/pg6301-fall2022/livecode_l1#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  },
+  "engines": {
+    "node": "16.17.0",
+    "npm":"8.15.0"
+  },
+  "dependencies": {
+    "check-node-version": "^4.2.1"
   }
 }
