@@ -2941,9 +2941,13 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$046e.prelude(module);
 
 try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _client = require("react-dom/client");
+var _navigation = require("./navigation/Navigation");
+var _navigationDefault = parcelHelpers.interopDefault(_navigation);
+var _indexCss = require("./index.css");
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 const root = _client.createRoot(document.getElementById("app"));
@@ -2954,7 +2958,7 @@ function Home() {
                 children: " Task management system"
             }, void 0, false, {
                 fileName: "index.jsx",
-                lineNumber: 10,
+                lineNumber: 13,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -2965,12 +2969,12 @@ function Home() {
                             children: " Task List "
                         }, void 0, false, {
                             fileName: "index.jsx",
-                            lineNumber: 12,
+                            lineNumber: 15,
                             columnNumber: 17
                         }, this)
                     }, void 0, false, {
                         fileName: "index.jsx",
-                        lineNumber: 12,
+                        lineNumber: 15,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -2979,24 +2983,24 @@ function Home() {
                             children: " Add New Task "
                         }, void 0, false, {
                             fileName: "index.jsx",
-                            lineNumber: 13,
+                            lineNumber: 16,
                             columnNumber: 17
                         }, this)
                     }, void 0, false, {
                         fileName: "index.jsx",
-                        lineNumber: 13,
+                        lineNumber: 16,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "index.jsx",
-                lineNumber: 11,
+                lineNumber: 14,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "index.jsx",
-        lineNumber: 9,
+        lineNumber: 12,
         columnNumber: 12
     }, this);
 }
@@ -3018,7 +3022,7 @@ function ListTask({ taskApi }) {
             children: "Loading..."
         }, void 0, false, {
             fileName: "index.jsx",
-            lineNumber: 34,
+            lineNumber: 37,
             columnNumber: 16
         }, this);
     }
@@ -3029,64 +3033,86 @@ function ListTask({ taskApi }) {
                 children: " List Task "
             }, void 0, false, {
                 fileName: "index.jsx",
-                lineNumber: 39,
+                lineNumber: 42,
                 columnNumber: 9
             }, this),
-            task.map((m)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                class: "wrapper",
+                children: task.map((m)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            class: "add-box",
                             children: [
-                                "Task Activity: ",
-                                m.activity,
-                                " "
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    children: [
+                                        m.activity,
+                                        " "
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "index.jsx",
+                                    lineNumber: 48,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    class: "salary-card",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: [
+                                                " Assign to: ",
+                                                m.emp.name,
+                                                " "
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "index.jsx",
+                                            lineNumber: 51,
+                                            columnNumber: 3
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: [
+                                                " Log hours: ",
+                                                m.emp.log,
+                                                " hours "
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "index.jsx",
+                                            lineNumber: 52,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: [
+                                                " Dept: ",
+                                                m.dpt
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "index.jsx",
+                                            lineNumber: 53,
+                                            columnNumber: 3
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "index.jsx",
+                                    lineNumber: 49,
+                                    columnNumber: 17
+                                }, this)
                             ]
                         }, void 0, true, {
                             fileName: "index.jsx",
-                            lineNumber: 43,
-                            columnNumber: 4
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: [
-                                " Employee name: ",
-                                m.emp.name,
-                                " "
-                            ]
-                        }, void 0, true, {
-                            fileName: "index.jsx",
-                            lineNumber: 44,
-                            columnNumber: 3
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: [
-                                " Log hours: ",
-                                m.emp.log,
-                                " hours "
-                            ]
-                        }, void 0, true, {
-                            fileName: "index.jsx",
-                            lineNumber: 45,
+                            lineNumber: 47,
                             columnNumber: 17
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: [
-                                " Department: ",
-                                m.dpt
-                            ]
-                        }, void 0, true, {
-                            fileName: "index.jsx",
-                            lineNumber: 46,
-                            columnNumber: 3
                         }, this)
-                    ]
-                }, m.activity, true, {
-                    fileName: "index.jsx",
-                    lineNumber: 42,
-                    columnNumber: 13
-                }, this))
+                    }, m.activity, false, {
+                        fileName: "index.jsx",
+                        lineNumber: 46,
+                        columnNumber: 18
+                    }, this))
+            }, void 0, false, {
+                fileName: "index.jsx",
+                lineNumber: 43,
+                columnNumber: 9
+            }, this)
         ]
     }, void 0, true, {
         fileName: "index.jsx",
-        lineNumber: 38,
+        lineNumber: 41,
         columnNumber: 12
     }, this);
 }
@@ -3094,14 +3120,12 @@ _s(ListTask, "QyN9HPeuh19d5yqcD1duhfVTQLw=");
 _c1 = ListTask;
 function NewTask({ taskApi }) {
     _s1();
-    const [name1, setName] = (0, _react.useState)("junaid");
     const [activity, setActivity] = (0, _react.useState)("hello");
     const [emp, setEmp] = (0, _react.useState)({
         "name": "jane1",
-        "dpt": "XYZ1",
         "log": 201
     });
-    const [dpt, setDpt] = (0, _react.useState)("ok");
+    const [dpt, setDpt] = (0, _react.useState)("IT");
     const navigate = (0, _reactRouterDom.useNavigate)();
     async function handleSubmit(e) {
         e.preventDefault();
@@ -3113,100 +3137,162 @@ function NewTask({ taskApi }) {
         });
         navigate("/");
     }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-        onSubmit: handleSubmit,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: " Enter details for new Task "
-            }, void 0, false, {
-                fileName: "index.jsx",
-                lineNumber: 74,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: [
-                        " Task Activity: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            value: activity,
-                            onChange: (e)=>setActivity(e.target.value)
-                        }, void 0, false, {
-                            fileName: "index.jsx",
-                            lineNumber: 76,
-                            columnNumber: 36
-                        }, this)
-                    ]
-                }, void 0, true, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "task-form",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+            onSubmit: handleSubmit,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: " Enter details for new Task "
+                }, void 0, false, {
                     fileName: "index.jsx",
-                    lineNumber: 76,
-                    columnNumber: 13
-                }, this)
-            }, void 0, false, {
-                fileName: "index.jsx",
-                lineNumber: 75,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: [
-                        " name: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            value: name1,
-                            onChange: (e)=>setName(e.target.value)
-                        }, void 0, false, {
-                            fileName: "index.jsx",
-                            lineNumber: 79,
-                            columnNumber: 27
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    lineNumber: 87,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        children: [
+                            " Task Activity: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                value: activity,
+                                onChange: (e)=>setActivity(e.target.value)
+                            }, void 0, false, {
+                                fileName: "index.jsx",
+                                lineNumber: 89,
+                                columnNumber: 36
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "index.jsx",
+                        lineNumber: 89,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
                     fileName: "index.jsx",
-                    lineNumber: 79,
-                    columnNumber: 13
-                }, this)
-            }, void 0, false, {
-                fileName: "index.jsx",
-                lineNumber: 78,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: [
-                        " Dpt: ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
-                            value: dpt,
-                            onChange: (e)=>setDpt(e.target.value)
-                        }, void 0, false, {
-                            fileName: "index.jsx",
-                            lineNumber: 82,
-                            columnNumber: 26
-                        }, this)
-                    ]
-                }, void 0, true, {
+                    lineNumber: 88,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        children: [
+                            " name: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                value: emp.name,
+                                onChange: (e)=>setEmp((prevEmp)=>({
+                                            ...prevEmp,
+                                            "name": e.target.value
+                                        }))
+                            }, void 0, false, {
+                                fileName: "index.jsx",
+                                lineNumber: 92,
+                                columnNumber: 27
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "index.jsx",
+                        lineNumber: 92,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
                     fileName: "index.jsx",
-                    lineNumber: 82,
-                    columnNumber: 13
+                    lineNumber: 91,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        children: [
+                            " Log: ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                                value: emp.log,
+                                onChange: (e)=>setEmp((prevEmp)=>({
+                                            ...prevEmp,
+                                            "log": e.target.value
+                                        }))
+                            }, void 0, false, {
+                                fileName: "index.jsx",
+                                lineNumber: 95,
+                                columnNumber: 26
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "index.jsx",
+                        lineNumber: 95,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "index.jsx",
+                    lineNumber: 94,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        children: [
+                            "Department:",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                value: dpt,
+                                onChange: (e)=>setDpt(e.target.value),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: "finance",
+                                        children: "Finance"
+                                    }, void 0, false, {
+                                        fileName: "index.jsx",
+                                        lineNumber: 101,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: "hr",
+                                        children: "Human Resources"
+                                    }, void 0, false, {
+                                        fileName: "index.jsx",
+                                        lineNumber: 102,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: "it",
+                                        children: "Information Technology"
+                                    }, void 0, false, {
+                                        fileName: "index.jsx",
+                                        lineNumber: 103,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "index.jsx",
+                                lineNumber: 99,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "index.jsx",
+                        lineNumber: 98,
+                        columnNumber: 9
+                    }, this)
+                }, void 0, false, {
+                    fileName: "index.jsx",
+                    lineNumber: 97,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    children: "Submit"
+                }, void 0, false, {
+                    fileName: "index.jsx",
+                    lineNumber: 108,
+                    columnNumber: 9
                 }, this)
-            }, void 0, false, {
-                fileName: "index.jsx",
-                lineNumber: 81,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                children: "Submit"
-            }, void 0, false, {
-                fileName: "index.jsx",
-                lineNumber: 84,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
+            ]
+        }, void 0, true, {
+            fileName: "index.jsx",
+            lineNumber: 85,
+            columnNumber: 5
+        }, this)
+    }, void 0, false, {
         fileName: "index.jsx",
-        lineNumber: 73,
-        columnNumber: 12
+        lineNumber: 84,
+        columnNumber: 14
     }, this);
 }
-_s1(NewTask, "CPpLW1eWdzfuvMEpI5R5H9hjp64=", false, function() {
+_s1(NewTask, "M/wavfoBQtZoZuLkA/7F+fcSs+o=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate)
     ];
@@ -3229,52 +3315,61 @@ function Application() {
         }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/",
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Home, {}, void 0, false, void 0, void 0)
-                }, void 0, false, {
-                    fileName: "index.jsx",
-                    lineNumber: 108,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/task/new",
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NewTask, {
-                        taskApi: taskApi
-                    }, void 0, false, void 0, void 0)
-                }, void 0, false, {
-                    fileName: "index.jsx",
-                    lineNumber: 109,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/task",
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ListTask, {
-                        taskApi: taskApi
-                    }, void 0, false, void 0, void 0)
-                }, void 0, false, {
-                    fileName: "index.jsx",
-                    lineNumber: 110,
-                    columnNumber: 13
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "index.jsx",
-            lineNumber: 107,
-            columnNumber: 9
-        }, this)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navigationDefault.default), {}, void 0, false, {
+                fileName: "index.jsx",
+                lineNumber: 132,
+                columnNumber: 1
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ListTask, {
+                            taskApi: taskApi
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "index.jsx",
+                        lineNumber: 136,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/task/new",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NewTask, {
+                            taskApi: taskApi
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "index.jsx",
+                        lineNumber: 137,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                        path: "/task",
+                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ListTask, {
+                            taskApi: taskApi
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "index.jsx",
+                        lineNumber: 138,
+                        columnNumber: 13
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "index.jsx",
+                lineNumber: 133,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "index.jsx",
-        lineNumber: 106,
+        lineNumber: 131,
         columnNumber: 12
     }, this);
 }
 _c3 = Application;
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Application, {}, void 0, false, {
     fileName: "index.jsx",
-    lineNumber: 116,
+    lineNumber: 144,
     columnNumber: 5
 }, undefined));
 var _c, _c1, _c2, _c3;
@@ -3288,7 +3383,7 @@ $RefreshReg$(_c3, "Application");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./navigation/Navigation":"gUM5Z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./index.css":"giGSC"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -33510,6 +33605,130 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}]},["7pbJ5","1xC6H","g9R30"], "g9R30", "parcelRequire8fbd")
+},{"7422ead32dcc1e6b":"786KC"}],"gUM5Z":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$14b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$14b2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _navigationCss = require("./Navigation.css");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+function Navigation() {
+    _s();
+    const [button, setButton] = (0, _react.useState)(true);
+    const [click, setClick] = (0, _react.useState)(false);
+    const handleClick = ()=>setClick(!click);
+    const closeMobileMenu = ()=>setClick(false);
+    const showButton = ()=>{
+        if (window.innerWidth <= 960) setButton(false);
+        else setButton(true);
+    };
+    (0, _react.useEffect)(()=>{
+        showButton();
+    }, []);
+    window.addEventListener("resize", showButton);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+                className: "navibar",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "navibar-container",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "menu-icon",
+                            onClick: handleClick,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                className: click ? "fas fa-times" : "fas fa-bars"
+                            }, void 0, false, {
+                                fileName: "navigation/Navigation.js",
+                                lineNumber: 31,
+                                columnNumber: 21
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "navigation/Navigation.js",
+                            lineNumber: 29,
+                            columnNumber: 17
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                            className: click ? "navi-menu active" : "navi-menu",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    className: "navi-item",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/task",
+                                        className: "navi-links",
+                                        onClick: closeMobileMenu,
+                                        children: "Task"
+                                    }, void 0, false, {
+                                        fileName: "navigation/Navigation.js",
+                                        lineNumber: 35,
+                                        columnNumber: 25
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "navigation/Navigation.js",
+                                    lineNumber: 34,
+                                    columnNumber: 21
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    className: "navi-item",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/task/new",
+                                        className: "navi-links",
+                                        onClick: closeMobileMenu,
+                                        children: "Add new Task"
+                                    }, void 0, false, {
+                                        fileName: "navigation/Navigation.js",
+                                        lineNumber: 40,
+                                        columnNumber: 25
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "navigation/Navigation.js",
+                                    lineNumber: 39,
+                                    columnNumber: 21
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "navigation/Navigation.js",
+                            lineNumber: 33,
+                            columnNumber: 17
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "navigation/Navigation.js",
+                    lineNumber: 27,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false, {
+                fileName: "navigation/Navigation.js",
+                lineNumber: 26,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "navigation/Navigation.js",
+                lineNumber: 49,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true);
+}
+_s(Navigation, "8YDrd/FDe6Wxws77ReQVMbDkgVQ=");
+_c = Navigation;
+exports.default = Navigation;
+var _c;
+$RefreshReg$(_c, "Navigation");
+
+  $parcel$ReactRefreshHelpers$14b2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Navigation.css":"4cOOI","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4cOOI":[function() {},{}],"giGSC":[function() {},{}]},["7pbJ5","1xC6H","g9R30"], "g9R30", "parcelRequire8fbd")
 
 //# sourceMappingURL=index.d498c491.js.map

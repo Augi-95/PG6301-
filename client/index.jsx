@@ -1,6 +1,9 @@
 import * as React from "react";
 import {useState, useEffect} from "react";
 import * as ReactDOM from "react-dom/client";
+import Navigation from './navigation/Navigation';
+import './index.css';
+
 import {Routes, Route, Link, BrowserRouter, useNavigate} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
@@ -37,28 +40,36 @@ if(!task){
 name
     return <div>
         <h1> List Task </h1>
+        <div class="wrapper">
         {
             task.map( m =>
-            <div key={m.activity}>
- 		<h1>Task Activity: {m.activity} </h1>
-		<div> Employee name: {m.emp.name} </div>
-                <div> Log hours: {m.emp.log} hours </div>
-		<div> Department: {m.dpt}</div>   
-            </div>
-        )}
+                 <div key={m.activity}>
+                <li class="add-box">
+                <h1>{m.activity} </h1>
+                <div class="salary-card">
+
+		<p> Assign to: {m.emp.name} </p>
+                <p> Log hours: {m.emp.log} hours </p>
+		<p> Dept: {m.dpt}</p>  
+        </div>
+                </li>
+              </div>
+
+         
+        )}</div>
     </div>;
 }
 
 
 function NewTask({taskApi}){
-const [name, setName] = useState("junaid");
+
     const [activity, setActivity] = useState("hello");
     const [emp, setEmp]  = useState({
       "name": "jane1",
-      "dpt": "XYZ1",
       "log": 201
     });
-    const [dpt, setDpt]  = useState("ok");
+    const [dpt, setDpt] = useState("IT");
+
 
     const navigate = useNavigate();
 
@@ -70,19 +81,33 @@ alert(activity);
         navigate("/");
     }
 
-    return <form onSubmit={handleSubmit}>
+    return   <div className="task-form"> 
+    <form onSubmit={handleSubmit}>
+      
         <h1> Enter details for new Task </h1>
         <div>
             <label> Task Activity: <input value={activity} onChange={e => setActivity(e.target.value)} /></label>
         </div>
         <div>
-            <label> name: <input value={name} onChange={e => setName(e.target.value)} /></label>
+            <label> name: <input value={emp.name} onChange={e => setEmp(prevEmp => ({ ...prevEmp, "name": e.target.value }))} /></label>
         </div>
         <div>
-            <label> Dpt: <textarea value={dpt} onChange={e => setDpt(e.target.value)}/></label>
+            <label> Log: <textarea value={emp.log} onChange={e => setEmp(prevEmp => ({ ...prevEmp, "log": e.target.value }))}/></label>
+        </div>
+        <div>
+        <label>Department: 
+            <select value={dpt} onChange={e => setDpt(e.target.value)}>
+              
+              <option value="finance">Finance</option>
+              <option value="hr">Human Resources</option>
+              <option value="it">Information Technology</option>
+              {/* Add more options as needed */}
+            </select>
+          </label>
         </div>
         <button>Submit</button>
     </form>
+    </div>
 }
 
 function Application(){
@@ -104,8 +129,11 @@ function Application(){
     }
 
     return <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home/>}></Route>
+<Navigation/>
+        <Routes>     
+	
+
+            <Route path="/" element={<ListTask taskApi={taskApi}/>}></Route>
             <Route path="/task/new" element={<NewTask taskApi={taskApi}/>}></Route>
             <Route path="/task" element={<ListTask taskApi={taskApi}/>}></Route>
         </Routes>

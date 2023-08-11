@@ -1,0 +1,74 @@
+.navibar {
+  z-index: 999;
+  background: linear-gradient(90deg, #697ab6 0% 100%);
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-size: 1.2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.navibar-container {
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  height: 80px;
+  display: flex;
+}
+
+.fa-typo3 {
+  margin-left: .5rem;
+  font-size: 1.8rem;
+}
+
+.navi-menu {
+  grid-gap: 100px;
+  text-align: center;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  width: 60vw;
+  margin-right: 2rem;
+  list-style: none;
+  display: grid;
+}
+
+.navi-item {
+  height: 80px;
+}
+
+.navi-links {
+  color: #ebeffc;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-decoration: none;
+  display: flex;
+}
+
+.navi-links:hover {
+  color: #3d3e41;
+  transition: all .2s ease-out;
+}
+
+.fa-bars {
+  color: #000;
+}
+
+.navi-links-mobile, .menu-icon {
+  display: none;
+}
+
+@media screen and (width <= 500px) {
+  .navibar-logo {
+    padding: 4px 5px;
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/*# sourceMappingURL=index.cca90e21.css.map */
